@@ -1,0 +1,8 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Welcome Component"></Label>
+</ActionBar>
+
+<GridLayout rows="auto, auto">
+    <Button text="Go To Tabs Page" [nsRouterLink]="['../tabs/default']"></Button>
+    <Button row="1" text="Logout" (tap)="onLogout()"></Button>
+</GridLayout>

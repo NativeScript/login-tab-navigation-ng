@@ -1,0 +1,12 @@
+<ActionBar title="Player Details" class="action-bar"></ActionBar>
+<StackLayout flexDirection="column" class="page" class="m-15">
+    <Label [text]="item.id"></Label>
+    <Label [text]="item.name + ' Details'"></Label>
+
+    <Button text="Next Player" [nsRouterLink]="['../', item.id + 1]"></Button>
+    <Button text="Go To Players" [nsRouterLink]="['../../players']"></Button>
+    <Button text="Back()" (tap)="back()"></Button>
+    <Button text="Back(ActivatedRoute)" (tap)="backByActivatedRoute()"></Button>
+    <Button text="Back(OutletName)" (tap)="backByOutlet()"></Button>
+    <Button text="Back(ParentRoute)" (tap)="backByParentRoute()"></Button>
+</StackLayout>
