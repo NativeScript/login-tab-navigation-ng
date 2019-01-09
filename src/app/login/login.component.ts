@@ -9,7 +9,7 @@ export class LoginComponent {
     constructor(private routerExtension: RouterExtensions) { };
 
     onNavigateWelcome() {
-        // Navigate to welcomew page with clearHistory
+        // Navigate to welcome page with clearHistory
         this.routerExtension.navigate(["../welcome"], { clearHistory: true });
     }
 }
