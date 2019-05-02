@@ -3,12 +3,8 @@ npm-debug.log
 
 *.js.map
 vendor*.ts
-*.js
-!tools/*.js
-!hooks/after-createProject/*.js
-*.css
-tsconfig.json
-tsconfig.esm.json
+src/**/*.js
+hooks/
 lib/
 node_modules/
 platforms/
