@@ -3,32 +3,37 @@ import { NativeScriptRouterModule, NSEmptyOutletComponent } from "nativescript-a
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { TabsComponent } from "./tabs.component";
+import { ProfileComponent } from "./profile.component";
+
+const routes = [
+    {
+        path: "default", component: TabsComponent, children: [
+            {
+                path: "players",
+                outlet: "playerTab",
+                component: NSEmptyOutletComponent,
+                loadChildren: () => import('../player/players.module').then(m => m.PlayersModule)
+            },
+            {
+                path: "teams",
+                outlet: "teamTab",
+                component: NSEmptyOutletComponent,
+                loadChildren: () => import('../team/teams.module').then(m => m.TeamsModule)
+            }
+        ]
+    },
+    { path: 'profile', component: ProfileComponent }
+]
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
         NativeScriptRouterModule,
-        NativeScriptRouterModule.forChild([
-            {
-                path: "default", component: TabsComponent, children: [
-                    {
-                        path: "players",
-                        outlet: "playerTab",
-                        component: NSEmptyOutletComponent,
-                        loadChildren: "~/app/player/players.module#PlayersModule",
-                    },
-                    {
-                        path: "teams",
-                        outlet: "teamTab",
-                        component: NSEmptyOutletComponent,
-                        loadChildren: "~/app/team/teams.module#TeamsModule"
-                    }
-                ]
-            }
-        ])
+        NativeScriptRouterModule.forChild(routes)
     ],
     declarations: [
-        TabsComponent
+        TabsComponent,
+        ProfileComponent
     ],
     providers: [
     ],

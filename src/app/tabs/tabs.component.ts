@@ -16,4 +16,12 @@ export class TabsComponent {
     ngOnInit() {
         this.routerExtension.navigate([{ outlets: { playerTab: ["players"], teamTab: ["teams"] } }], { relativeTo: this.activeRoute });
     }
+
+    navToWelcome() {
+        this.routerExtension.navigate(["welcome"]);
+    }
+
+    navToProfile() {
+        this.routerExtension.navigate(["tabs/profile"]);
+    }
 }

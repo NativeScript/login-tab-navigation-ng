@@ -1,7 +1,38 @@
-<TabView androidTabsPosition="bottom">
+<!-- <TabView androidTabsPosition="bottom">
     <page-router-outlet *tabItem="{title: 'Players Tab'}" name="playerTab" actionBarVisibility="never">
     </page-router-outlet>
 
     <page-router-outlet *tabItem="{title: 'Teams Tab'}" name="teamTab" actionBarVisibility="never">
     </page-router-outlet>
-</TabView>
+</TabView> -->
+
+<BottomNavigation selectedIndex="1">
+    <TabStrip>
+        <TabStripItem>
+            <Label text="Home"></Label>
+            <!-- <Image src="font://&#xf015;" class="fas t-36"></Image> -->
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Account"></Label>
+            <!-- <Image src="font://&#xf007;" class="fas t-36"></Image> -->
+        </TabStripItem>
+        <TabStripItem class="special">
+            <Label text="Profile"></Label>
+            <!-- <Image src="font://&#xf007;" class="fas t-36"></Image> -->
+        </TabStripItem>
+    </TabStrip>
+    <TabContentItem>
+        <page-router-outlet name="playerTab" actionBarVisibility="never">
+        </page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <page-router-outlet name="teamTab" actionBarVisibility="never">
+        </page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout rows="*, *" columns="*">
+            <Button row="0" text="this.routerExtension.navigate(['welcome'])" (tap)="navToWelcome()"></Button>
+            <Button row="1" text="this.routerExtension.navigate(['tabs/profile'])" (tap)="navToProfile()"></Button>
+        </GridLayout>
+    </TabContentItem>
+</BottomNavigation>
