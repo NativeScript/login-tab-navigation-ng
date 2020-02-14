@@ -1,7 +1,23 @@
-<TabView androidTabsPosition="bottom">
-    <page-router-outlet *tabItem="{title: 'Players Tab'}" name="playerTab" actionBarVisibility="never">
-    </page-router-outlet>
+<BottomNavigation>
+    <TabStrip iosIconRenderingMode="alwaysOriginal">
 
-    <page-router-outlet *tabItem="{title: 'Teams Tab'}" name="teamTab" actionBarVisibility="never">
-    </page-router-outlet>
-</TabView>
+        <TabStripItem>
+            <Label text="Players Tab"></Label>
+            <Image src="font://&#xf007;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem>
+            <Label text="Teams Tab"></Label>
+            <Image src="font://&#xf0c0;" class="fas t-36"></Image>
+        </TabStripItem>
+
+    </TabStrip>
+
+    <TabContentItem>
+        <page-router-outlet name="playerTab" actionBarVisibility="never"></page-router-outlet>
+    </TabContentItem>
+
+    <TabContentItem>
+        <page-router-outlet name="teamTab" actionBarVisibility="never"></page-router-outlet>
+    </TabContentItem>
+
+</BottomNavigation>
