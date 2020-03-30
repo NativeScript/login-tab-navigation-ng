@@ -15,13 +15,13 @@ import { TabsComponent } from "./tabs.component";
                         path: "players",
                         outlet: "playerTab",
                         component: NSEmptyOutletComponent,
-                        loadChildren: "~/app/player/players.module#PlayersModule",
+                        loadChildren: () => import("~/app/player/players.module").then(m => m.PlayersModule),
                     },
                     {
                         path: "teams",
                         outlet: "teamTab",
                         component: NSEmptyOutletComponent,
-                        loadChildren: "~/app/team/teams.module#TeamsModule"
+                        loadChildren: () => import("~/app/team/teams.module").then(m => m.TeamsModule),
                     }
                 ]
             }
