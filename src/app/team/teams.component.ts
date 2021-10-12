@@ -3,7 +3,6 @@ import { DataService, DataItem } from "../data.service";
 
 @Component({
     selector: "ns-teams",
-    moduleId: module.id,
     templateUrl: "./teams.component.html",
 })
 export class TeamsComponent implements OnInit {

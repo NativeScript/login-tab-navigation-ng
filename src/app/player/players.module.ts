@@ -1,9 +1,8 @@
 
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { PlayerComponent } from "./players.component";
 import { PlayerDetailComponent } from "./player-detail.component";
-import { NativeScriptCommonModule } from "nativescript-angular/common";
+import { NativeScriptCommonModule, NativeScriptRouterModule } from "@nativescript/angular";
 
 @NgModule({
     imports: [

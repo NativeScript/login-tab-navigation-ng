@@ -1,12 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { RouterExtensions } from "nativescript-angular/router";
+import { RouterExtensions } from "@nativescript/angular";
 import { DataService, DataItem } from "../data.service";
 import { Subscription } from "rxjs";
 
 @Component({
     selector: "ns-player-details",
-    moduleId: module.id,
     templateUrl: "./player-detail.component.html",
 })
 export class PlayerDetailComponent implements OnInit {

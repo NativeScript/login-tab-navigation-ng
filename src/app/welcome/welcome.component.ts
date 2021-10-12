@@ -1,8 +1,7 @@
 import { Component } from "@angular/core";
-import { RouterExtensions } from "nativescript-angular/router";
+import { RouterExtensions } from "@nativescript/angular";
 
 @Component({
-    moduleId: module.id,
     selector: "welcome-page",
     templateUrl: "./welcome.component.html"
 })

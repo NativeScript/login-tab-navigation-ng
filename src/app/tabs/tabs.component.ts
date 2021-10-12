@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
-import { RouterExtensions } from "nativescript-angular/router";
 import { ActivatedRoute } from "@angular/router";
+import { RouterExtensions } from "@nativescript/angular";
+
+
 
 @Component({
-    moduleId: module.id,
     selector: "tabs-page",
     templateUrl: "./tabs.component.html"
 })

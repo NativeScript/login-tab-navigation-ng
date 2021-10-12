@@ -1,6 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptRouterModule, NSEmptyOutletComponent } from "nativescript-angular/router";
-import { NativeScriptCommonModule } from "nativescript-angular/common";
+import { NativeScriptCommonModule, NativeScriptRouterModule, NSEmptyOutletComponent } from "@nativescript/angular";
+import { NativeScriptMaterialBottomNavigationModule } from '@nativescript-community/ui-material-bottom-navigation/angular';
 
 import { TabsComponent } from "./tabs.component";
 
@@ -8,6 +8,7 @@ import { TabsComponent } from "./tabs.component";
     imports: [
         NativeScriptCommonModule,
         NativeScriptRouterModule,
+        NativeScriptMaterialBottomNavigationModule,
         NativeScriptRouterModule.forChild([
             {
                 path: "default", component: TabsComponent, children: [
